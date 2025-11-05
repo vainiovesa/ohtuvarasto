@@ -1,10 +1,11 @@
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
-        if tilavuus > 0.0:
-            self.tilavuus = tilavuus
-        else:
-            # virheellinen, nollataan
-            self.tilavuus = 0.0
+        self.tilavuus = tilavuus if tilavuus > 0.0 else 0.0
+        # if tilavuus > 0.0:
+        #     self.tilavuus = tilavuus
+        # else:
+        #     # virheellinen, nollataan
+        #     self.tilavuus = 0.0
 
         if alku_saldo < 0.0:
             # virheellinen, nollataan
@@ -16,7 +17,8 @@ class Varasto:
             # täyteen ja ylimäärä hukkaan!
             self.saldo = tilavuus
 
-    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
+    # huom: ominaisuus voidaan myös laskea.
+    # Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
@@ -46,19 +48,19 @@ class Varasto:
 
 # Aiheutetaan tällä kommentilla ongelmia
 
-class ProblemGiver:
-    def __init__(self, a, b, c, d, e, f, g, h):
-         self.a = a
-         self.b = b
-         self.c = c
-         self.d = d
-         self.e = e
-         self.f = f
-         self.g = g
-         self.h = h
+# class ProblemGiver:
+#     def __init__(self, a, b, c, d, e, f, g, h):
+#          self.a = a
+#          self.b = b
+#          self.c = c
+#          self.d = d
+#          self.e = e
+#          self.f = f
+#          self.g = g
+#          self.h = h
 
-    def nesting_problem(self, a, b):
-        if a:
-            if b:
-                for _ in range(a):
-                    print(b)
+#     def nesting_problem(self, a, b):
+#         if a:
+#             if b:
+#                 for _ in range(a):
+#                     print(b)
