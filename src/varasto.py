@@ -45,3 +45,20 @@ class Varasto:
         return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
 
 # Aiheutetaan tällä kommentilla ongelmia
+
+class ProblemGiver:
+    def __init__(self, a, b, c, d, e, f, g, h):
+         self.a = a
+         self.b = b
+         self.c = c
+         self.d = d
+         self.e = e
+         self.f = f
+         self.g = g
+         self.h = h
+
+    def nesting_problem(self, a, b):
+        if a:
+            if b:
+                for _ in range(a):
+                    print(b)
