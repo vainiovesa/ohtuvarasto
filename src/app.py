@@ -9,7 +9,7 @@ next_id = 1
 
 
 def get_next_id():
-    global next_id
+    global next_id # pylint: disable=global-statement
     current_id = next_id
     next_id += 1
     return current_id
